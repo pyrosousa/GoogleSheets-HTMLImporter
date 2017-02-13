@@ -3,19 +3,29 @@ Attempt at making a jQuery plugin that will import data from a google spreadshee
 
 However, I still think this will end up being a useful plugin, since it will make it crazy easy to import a google sheet into a webpage.
 
+# Usage
+```html
+	<div class="gsImport"
+		data-key="Google-Sheets-Key"
+		data-index="Sheet#"
+		data-headers="String, of, Headers">
+	</div>
+```
+```html
+	<script>
+		$(".gsImport").gsImport();
+	</script>
+```
 
 
-# References
-
-####Grouping
-http://stackoverflow.com/questions/4247188/how-do-i-group-a-certain-number-of-elements-with-jquery
-
-####Json Backend (figuring out how to parse the json)
-https://coderwall.com/p/duapqq/use-a-google-spreadsheet-as-your-json-backend
+# Research and Such
 
 ####Main Reference/Source
-This person provided the base script which i modified to make usable for us.
-####Google Sheets API
-Technical Overview of how to interface with google sheets via scripting
-####Google Sheets Example
-The exact API i used might be outdated or something, but for now it works great.
+http://michelleminkoff.com/2010/11/22/using-google-spreadsheets-as-your-database/
+This originally was the base script that I was using. I have since adapted it to jQuery, and then to this jQuery plugin. 
+
+####Grouping DOM elements
+http://stackoverflow.com/questions/4247188/how-do-i-group-a-certain-number-of-elements-with-jquery
+
+####Parsing json from google sheet
+https://coderwall.com/p/duapqq/use-a-google-spreadsheet-as-your-json-backend
