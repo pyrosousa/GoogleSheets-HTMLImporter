@@ -1,0 +1,27 @@
+/*.gsImport-table {
+	border: solid;
+}
+
+.gsImport-headerRow {
+	background: red;
+	margin: 100px;
+}
+*/
+
+tbody{
+	text-align: center;
+}
+
+tr>th {
+	color: blue;
+	text-align: center;
+}
+
+.title {
+	text-align: center;
+}
+
+hr.heavy {
+	border: 1px solid slategray;
+	border-radius: 2em;
+}

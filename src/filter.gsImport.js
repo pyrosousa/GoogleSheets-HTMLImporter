@@ -1,19 +1,6 @@
-// check URL
-// get  headers
-
-// load json
-// parse json
-// 	append table headers
-// 	append table columns
-// 		ignore rows marked with settings.ignore
-// 		append icons for cells
-// 			default icon
-// 			special icon for defined with settings.icon
-// 			return string
-
 $(document).ready(function () {
 
-	$("#gsImport").append(function gsImporter() {
+	$(".gsImport").append(function gsImporter() {
 		var $me = $(this),
 			headers = $me.data("headers"),
 			key = $me.data('key'),
@@ -22,25 +9,43 @@ $(document).ready(function () {
 		var url = "https://spreadsheets.google.com/feeds/list/" + key + "/1/public/values?alt=json";
 		var headerList = headers.split(', ');
 
+		function picturize(nStr) {
+				switch (nStr)
+				{
+					case "":
+						return '-';
+						break;
+					case "!":
+						return '<i class="fa fa-check"></i>';
+						break;
+					case "X":
+						return '<i class="fa fa-times"></i>';
+						break;
+					default:
+						return nStr;
+						break;
+				}
+			}
+
 		$.getJSON(url, function(data) {
 			var entry = data.feed.entry;
-
-			$('.results').append('<table><tbody></tbody></table>')
+			console.log($me)
+			$($me).append('<table class="gsImport-table table table-responsive table-striped"><thead></thead><tbody></tbody></table>')
 
 			$(headerList).each(function(){ // Adds headers
-				$('.results table tbody').append('<th>' + this.toString()+"</th>")
+				$($me).find(' table thead').append('<th class="gsImport-header ">' + this.toString()+"</th>")
 			})
-			$('.results table tbody th').wrapAll('<tr class="table-headers"></tr>')
+			$($me).find(' table thead th').wrapAll('<tr class="gsImport-headerRow"></tr>')
 
 			$(entry).each(function(){
 				var $curCell = this;
 					$(headerList).each(function () {
-							$('.results table tbody').append("<td>" + eval('$curCell.gsx$'+this.toString().toLowerCase()+'.$t') + "</td>")
+							$($me).find(' table tbody').append("<td>" + picturize(eval('$curCell.gsx$'+this.toString().toLowerCase()+'.$t')) + "</td>")
 				})
 			});
 
 			var i = 0,
-			    cells = $(".results table tbody td"),
+			    cells = $($me).find(' table tbody td'),
 			    group;
 
 			while ((group = cells.slice(i, i += headerList.length)).length) {
