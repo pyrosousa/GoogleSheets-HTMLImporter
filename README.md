@@ -3,6 +3,9 @@ Attempt at making a jQuery plugin that will import data from a google spreadshee
 
 However, I still think this will end up being a useful plugin, since it will make it crazy easy to import a google sheet into a webpage.
 
+# Demo
+https://rawgit.com/pyrosousa/GoogleSheets-HTMLImporter/master/demo/index.html
+
 # Usage
 1. Include jQuery:
 
