@@ -5,7 +5,8 @@
 
 ;(function($) {
 	$.fn.gsImport = function( options ) {
-		var settings = $.extend({
+
+		var defaults = {
             cellClass: 'gsCell',
             rowClass: 'gsRow',
             headerClass: 'gsHeader',
@@ -16,9 +17,9 @@
             image2: '<i class="fa fa-times"></i>',
             customImages: '',
             ignore: '',
+        }
 
-        }, options );
-
+		var settings = $.extend(defaults, options );
 
         return this.append(function gsImporter() {
 		var $me = $(this),
@@ -67,7 +68,7 @@
 			console.log($me)
 			$($me).append('<table class="' + settings.tableClass + '"><thead></thead><tbody></tbody></table>')
 
-			$(headerList).each(function(){ // Adds headers
+			$.each(headerList, function(){ // Adds headers
 				$($me).find(' table thead').append('<th class="' + settings.headerClass + '">' + this.toString()+"</th>")
 			})
 			$($me).find(' table thead th').wrapAll('<tr class="' + settings.headerRowClass + '"></tr>')
