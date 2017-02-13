@@ -1,3 +1,8 @@
+//features to add:
+//		search-bar
+//		custom-Image Cases
+//		Ignore row if ...
+
 ;(function($) {
 	$.fn.gsImport = function( options ) {
 		var settings = $.extend({
@@ -5,6 +10,7 @@
             rowClass: 'gsRow',
             headerClass: 'gsHeader',
             headerRowClass: 'gsHeaderRow',
+            bodyClass: 'gsBody',
             tableClass: 'gsTable table table-responsive table-striped',
             image1: '<i class="fa fa-check"></i>',
             image2: '<i class="fa fa-times"></i>',
