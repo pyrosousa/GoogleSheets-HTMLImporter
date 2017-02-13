@@ -8,6 +8,7 @@
             tableClass: 'gsTable table table-responsive table-striped',
             image1: '<i class="fa fa-check"></i>',
             image2: '<i class="fa fa-times"></i>',
+            customImages: '',
             ignore: '',
 
         }, options );
@@ -19,6 +20,21 @@
 			key = $me.data('key'),
 			index = $me.data('index')
 
+		if (typeof key === 'undefined') {
+		    console.error('GSImport: No data-key provided for div: ' + $me.attr('id'))
+		    return;
+		}
+
+		if (typeof headers === 'undefined') {
+		    console.error('GSImport: No data-headers provided for div: ' + $me.attr('id'))
+		    return;
+		}
+
+		if (typeof index === 'undefined') {
+		    console.warn('GSImport: No data-index provided for div: ' + $me.attr('id') + '\nDefaulting to od6')
+		    index = "od6"
+		}
+
 		var url = "https://spreadsheets.google.com/feeds/list/" + key + "/1/public/values?alt=json";
 		var headerList = headers.split(', ');
 
@@ -29,10 +45,10 @@
 						return '-';
 						break;
 					case "!":
-						return '<i class="fa fa-check"></i>';
+						return settings.image1;
 						break;
 					case "X":
-						return '<i class="fa fa-times"></i>';
+						return settings.image2;
 						break;
 					default:
 						return nStr;
