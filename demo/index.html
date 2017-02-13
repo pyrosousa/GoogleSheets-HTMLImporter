@@ -7,19 +7,44 @@
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
   crossorigin="anonymous"></script>
 	  <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>');</script>
-		<!-- <script src="../src/jquery.gsImporter.js"></script> -->
+
+
+
 		<script src="https://use.fontawesome.com/392e4e5be6.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 	</head>
 	<body>
-		<h2>Google Sheets Importer <i class="fa fa-check"></i>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 title" >
+					<h2>Google Sheets Importer <i class="fa fa-check"></i>
 		<i class="fa fa-times"></i></h2>
+				</div>
+			</div>
+			<hr>
+			<div id="gsImport-1" class="gsImport" data-key="1YZK_3X8-te4SSluPfwB1ddKJDufkgyJB0X-Q44GkaMg" data-headers="Name, Age, Pics, Email" data-index="1"></div>
+			<hr class="heavy">
+			<div id="gsImport-2" class="gsImport" data-key="1-gmcB6mDge7Xbmt6fxA3oR70QmOitHnIeJuGTorihgM" data-headers="Software, Version, A, B, C, D, E, J, DPL1, DPL2, VEL" data-index="5"></div>
+		</div>
 
-		<div class="results"></div>
+		<!-- <script src="../src/filter.gsImport.js"></script> -->
+		<script src="../src/jquery.gsImport.js"></script>
+		<script type="text/javascript">
+			$('.gsImport').gsImport({
 
-		<div id="gsImport" data-key="1YZK_3X8-te4SSluPfwB1ddKJDufkgyJB0X-Q44GkaMg" data-headers="Name, Age, Email" data-index="1"></div>
-
-		<script src="../src/filter.gsImport.js"></script>
+			});
+		</script>
 
 	</body>
 </html>
