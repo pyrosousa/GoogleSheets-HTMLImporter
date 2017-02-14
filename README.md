@@ -42,10 +42,15 @@ https://rawgit.com/pyrosousa/GoogleSheets-HTMLImporter/master/demo/index.html
 
 ####Main Reference/Source
 http://michelleminkoff.com/2010/11/22/using-google-spreadsheets-as-your-database/
-This originally was the base script that I was using. I have since adapted it to jQuery, and then to this jQuery plugin. 
+This originally was the base script that I was using. I have since adapted it to jQuery, and then to this jQuery plugin.
 
 ####Grouping DOM elements
 http://stackoverflow.com/questions/4247188/how-do-i-group-a-certain-number-of-elements-with-jquery
 
 ####Parsing json from google sheet
 https://coderwall.com/p/duapqq/use-a-google-spreadsheet-as-your-json-backend
+
+#License
+This software is available under the following license:
+
+	*MIT
