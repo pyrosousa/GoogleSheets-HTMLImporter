@@ -25,3 +25,11 @@ hr.heavy {
 	border: 1px solid slategray;
 	border-radius: 2em;
 }
+
+.check-icon {
+	color: green;
+}
+
+.x-icon {
+	color: red;
+}

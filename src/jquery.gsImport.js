@@ -4,22 +4,58 @@
 //		Ignore row if ...
 
 ;(function($) {
+	'use strict';
+
 	$.fn.gsImport = function( options ) {
 
 		var defaults = {
-            cellClass: 'gsCell',
-            rowClass: 'gsRow',
-            headerClass: 'gsHeader',
-            headerRowClass: 'gsHeaderRow',
-            bodyClass: 'gsBody',
-            tableClass: 'gsTable table table-responsive table-striped',
-            image1: '<i class="fa fa-check"></i>',
-            image2: '<i class="fa fa-times"></i>',
+			class: {
+	            'cell': 'gsCell',
+	            'row': 'gsRow',
+	            'header': 'gsHeader',
+	            'headerRow': 'gsHeaderRow',
+	            'body': 'gsBody',
+	            'table': 'gsTable table table-responsive table-striped',
+			},
+            image1: '<i class="fa fa-check check-icon"></i>',
+            image2: '<i class="fa fa-times x-icon"></i>',
             customImages: '',
             ignore: '',
         }
 
-		var settings = $.extend(defaults, options );
+		var settings = $.extend(true, {}, defaults, options );
+
+		var tagClassRE = /^[A-Za-z][ -_A-Za-z0-9]+$/;
+
+		$.each(settings, function validateOptions(key, val) {
+			if (key === 'class') {
+				if (typeof val.table !== 'string' || val.table.match(tagClassRE) === null){
+					settings[key]['table'] = defaults[key]['table']
+					console.warn("GSImport: One of your GSImport options might not be valid.")
+				}
+				if (typeof val.cell !== 'string' || val.cell.match(tagClassRE) === null){
+					settings[key]['cell'] = defaults[key]['cell']
+					console.warn("GSImport: One of your GSImport options might not be valid.")
+				}
+				if (typeof val.row !== 'string' || val.row.match(tagClassRE) === null){
+					settings[key]['row'] = defaults[key]['row']
+					console.warn("GSImport: One of your GSImport options might not be valid.")
+				}
+				if (typeof val.header !== 'string' || val.header.match(tagClassRE) === null){
+					settings[key]['header'] = defaults[key]['header']
+					console.warn("GSImport: One of your GSImport options might not be valid.")
+				}
+				if (typeof val.headerRow !== 'string' || val.headerRow.match(tagClassRE) === null){
+					settings[key]['headerRow'] = defaults[key]['headerRow']
+					console.warn("GSImport: One of your GSImport options might not be valid.")
+				}
+				if (typeof val.body !== 'string' || val.body.match(tagClassRE) === null){
+					settings[key]['body'] = defaults[key]['body']
+					console.warn("GSImport: One of your GSImport options might not be valid.")
+				}
+			}
+		})
+
 
         return this.append(function gsImporter() {
 		var $me = $(this),
@@ -65,18 +101,17 @@
 
 		$.getJSON(url, function(data) {
 			var entry = data.feed.entry;
-			console.log($me)
-			$($me).append('<table class="' + settings.tableClass + '"><thead></thead><tbody></tbody></table>')
+			$($me).append('<table class="' + settings.class.table + '"><thead></thead><tbody class="'+ settings.class.body + '"></tbody></table>')
 
 			$.each(headerList, function(){ // Adds headers
-				$($me).find(' table thead').append('<th class="' + settings.headerClass + '">' + this.toString()+"</th>")
+				$($me).find(' table thead').append('<th class="' + settings.class.header + '">' + this.toString()+"</th>")
 			})
-			$($me).find(' table thead th').wrapAll('<tr class="' + settings.headerRowClass + '"></tr>')
+			$($me).find(' table thead th').wrapAll('<tr class="' + settings.class.headerRow + '"></tr>')
 
 			$(entry).each(function(){
 				var $curCell = this;
 					$(headerList).each(function () {
-							$($me).find(' table tbody').append('<td class="' + settings.cellClass + '">' + picturize(eval('$curCell.gsx$'+this.toString().toLowerCase()+'.$t')) + '</td>')
+							$($me).find(' table tbody').append('<td class="' + settings.class.cell + '">' + picturize(eval('$curCell.gsx$'+this.toString().toLowerCase()+'.$t')) + '</td>')
 				})
 			});
 
@@ -85,9 +120,9 @@
 			    group;
 
 			while ((group = cells.slice(i, i += headerList.length)).length) {
-			    group.wrapAll('<tr class="' + settings.rowClass + '"></tr>');
+			    group.wrapAll('<tr class="' + settings.class.row + '"></tr>');
 			}
-
+			console.log("GS Import: " + $me.attr('id') +' key(' + $me.data('key') + ") loaded")
 		});
 	});
 	}
