@@ -1,3 +1,11 @@
+/*
+ *  googlesheets-htmlimporter - v0.1.0
+ *  A jQuery plugin to assist with loading Google Sheets json information as HTML on a web page.
+ *  https://github.com/seanmcardwell/GoogleSheets-HTMLImporter#readme
+ *
+ *  Made by Sean Cardwell
+ *  Under MIT License
+ */
 // The MIT License
 // Copyright (c) 2017 Sean Cardwell
 // https://raw.githubusercontent.com/pyrosousa/GoogleSheets-HTMLImporter/master/Licence.MIT
