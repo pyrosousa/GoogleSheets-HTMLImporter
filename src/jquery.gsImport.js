@@ -27,8 +27,8 @@
             image2: "<i class=\"fa fa-times x-icon\"></i>",
             customImages: "",
             ignore: {
-            	"column": "status",
-            	"trigger": "ignore",
+            	"column": "ignore",
+            	"trigger": "X",
             }
         };
 
@@ -123,7 +123,8 @@
 			var sheetHTML = "";
 			var headerHTML = "";
 
-			if ( settings.picturize === 1 ) {
+			// console.log(settings.ignore.column)
+
 				$.getJSON(url, function(data) {
 					var entry = data.feed.entry;
 					sheetHTML += "<table class=\"" + settings.class.table + "\"><thead><tr class=\"" + settings.class.headerRow + "\">";
@@ -136,12 +137,11 @@
 
 					$(entry).each(function(){
 						var $curRow = this;
-						// console.log($curRow);
-						console.log(eval("$curRow.gsx$" + settings.ignore.column + ".$t"));
-						if ( eval("$curRow.gsx$" + settings.ignore.column + ".$t").toLowerCase() !== settings.ignore.trigger.toLowerCase() ){
+
+						if ( $curRow["gsx$"+settings.ignore.column.toLowerCase()]["$t"].toLowerCase() !== settings.ignore.trigger.toLowerCase() ){
 							sheetHTML += "<tr>"
 							$(headerList).each(function () {
-								sheetHTML += "<td class=\"" + settings.class.cell + "\">" + picturize(eval("$curRow.gsx$"+this.toString().toLowerCase()+".$t")) + "</td>";
+								sheetHTML += "<td class=\"" + settings.class.cell + "\">" + picturize($curRow["gsx$"+this.toString().toLowerCase()]["$t"]) + "</td>";
 							});
 							sheetHTML+="</tr>"
 						}
@@ -150,34 +150,7 @@
 					$($me).append(sheetHTML);
 					console.log("GS Import: " + $me.attr("id") +" key(" + $me.data("key") + ") loaded");
 				});				
-			}
 
-			if ( settings.picturize === 0 ) {
-				$.getJSON(url, function(data) {
-					var entry = data.feed.entry;
-					sheetHTML += "<table class=\"" + settings.class.table + "\"><thead><tr class=\"" + settings.class.headerRow + "\">";
-
-					$.each(headerList, function() {
-						sheetHTML += "<th class=\"" + settings.class.header + "\">" + this.toString()+"</th>"
-					});
-
-					sheetHTML += "</tr></thead><tbody class=\""+ settings.class.body + "\">";
-
-					$(entry).each(function(){
-						var $curRow = this;
-						// console.log($curRow);
-						sheetHTML += "<tr>"
-							$(headerList).each(function () {
-									sheetHTML += "<td class=\"" + settings.class.cell + "\">" + eval("$curRow.gsx$"+this.toString().toLowerCase()+".$t") + "</td>";
-						});
-						sheetHTML+="</tr>"
-					});
-
-					sheetHTML += "</tbody></table>"
-					$($me).append(sheetHTML);
-					console.log("GS Import: " + $me.attr("id") +" key(" + $me.data("key") + ") loaded");
-				});
-			}
 		return sheetHTML
 		});
 	};
