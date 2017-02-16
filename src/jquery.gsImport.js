@@ -102,36 +102,37 @@
 				}
 			}
 
+		var sheetHTML = "";
+		var headerHTML = "";
 
 		$.getJSON(url, function(data) {
 			var entry = data.feed.entry;
-			$($me).append("<table class=\"" + settings.class.table + "\"><thead></thead><tbody class=\""+ settings.class.body + "\"></tbody></table>");
+			sheetHTML += "<table class=\"" + settings.class.table + "\"><thead><tr class=\"" + settings.class.headerRow + "\">";
 
 			$.each(headerList, function(){ // Adds headers
-				$($me).find(" table thead").append("<th class=\"" + settings.class.header + "\">" + this.toString()+"</th>");
+				sheetHTML += "<th class=\"" + settings.class.header + "\">" + this.toString()+"</th>"
 			});
 
-			$($me).find(" table thead th").wrapAll("<tr class=\"" + settings.class.headerRow + "\"></tr>");
+			sheetHTML += "</tr></thead><tbody class=\""+ settings.class.body + "\">";
 
 			$(entry).each(function(){
-
 				var $curRow = this;
+				// console.log($curRow);
+				sheetHTML += "<tr>"
 					$(headerList).each(function () {
-							console.log(this.toString());
-							$($me).find(" table tbody").append("<td class=\"" + settings.class.cell + "\">" + picturize(eval("$curRow.gsx$"+this.toString().toLowerCase()+".$t")) + "</td>");
-
+							sheetHTML += "<td class=\"" + settings.class.cell + "\">" + picturize(eval("$curRow.gsx$"+this.toString().toLowerCase()+".$t")) + "</td>";
 				});
+				sheetHTML+="</tr>"
 			});
 
-			var i = 0,
-			    cells = $($me).find(" table tbody td"),
-			    group;
+			sheetHTML += "</tbody></table>"
+			$($me).append(sheetHTML);
 
-			while ((group = cells.slice(i, i += headerList.length)).length) {
-			    group.wrapAll("<tr class=\"" + settings.class.row + "\"></tr>");
-			}
 			console.log("GS Import: " + $me.attr("id") +" key(" + $me.data("key") + ") loaded");
 		});
+
+
+		
 	});
 	};
 }(jQuery));
