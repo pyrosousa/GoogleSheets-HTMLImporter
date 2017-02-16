@@ -21,10 +21,15 @@
 	            "body": "gsBody",
 	            "table": "gsTable table table-responsive table-striped",
 			},
+			searchBar: 0,
+			picturize: 1,
             image1: "<i class=\"fa fa-check check-icon\"></i>",
             image2: "<i class=\"fa fa-times x-icon\"></i>",
             customImages: "",
-            ignore: "",
+            ignore: {
+            	"column": "status",
+            	"trigger": "ignore",
+            }
         };
 
 		var settings = $.extend(true, {}, defaults, options );
@@ -32,107 +37,148 @@
 		var tagClassRE = /^[A-Za-z][ -_A-Za-z0-9]+$/;
 
 		$.each(settings, function validateOptions(key, val) {
+
 			if (key === "class") {
+
 				if (typeof val.table !== "string" || val.table.match(tagClassRE) === null){
-					settings.key.table = defaults.key.table;
-					console.warn("GSImport: One of your GSImport options might not be valid.");
+					settings.class.table = defaults.class.table;
+					console.warn("GSImport:\t One of your GSImport options might be invalid.\n\t\t\t Resetting to default value for Class.table.");
 				}
 				if (typeof val.cell !== "string" || val.cell.match(tagClassRE) === null){
-					settings.key.cell = defaults.key.cell;
-					console.warn("GSImport: One of your GSImport options might not be valid.");
+					settings.class.cell = defaults.class.cell;
+					console.warn("GSImport:\t One of your GSImport options might be invalid.\n\t\t\t Resetting to default value for Class.cell.");
 				}
 				if (typeof val.row !== "string" || val.row.match(tagClassRE) === null){
-					settings.key.row = defaults.key.row;
-					console.warn("GSImport: One of your GSImport options might not be valid.");
+					settings.class.row = defaults.class.row;
+					console.warn("GSImport:\t One of your GSImport options might be invalid.\n\t\t\t Resetting to default value for Class.row.");
 				}
 				if (typeof val.header !== "string" || val.header.match(tagClassRE) === null){
-					settings.key.header = defaults.key.header;
-					console.warn("GSImport: One of your GSImport options might not be valid.");
+					settings.class.header = defaults.class.header;
+					console.warn("GSImport:\t One of your GSImport options might be invalid.\n\t\t\t Resetting to default value for Class.header.");
 				}
 				if (typeof val.headerRow !== "string" || val.headerRow.match(tagClassRE) === null){
-					settings.key.headerRow = defaults.key.headerRow;
-					console.warn("GSImport: One of your GSImport options might not be valid.");
+					settings.class.headerRow = defaults.class.headerRow;
+					console.warn("GSImport:\t One of your GSImport options might be invalid.\n\t\t\t Resetting to default value for Class.headerRow.");
 				}
 				if (typeof val.body !== "string" || val.body.match(tagClassRE) === null){
-					settings.key.body = defaults.key.body;
-					console.warn("GSImport: One of your GSImport options might not be valid.");
+					settings.class.body = defaults.key.body;
+					console.warn("GSImport:\t One of your GSImport options might be invalid.\n\t\t\t Resetting to default value for Class.body.");
 				}
 			}
+			if (key === "searchBar"){
+				if (val !== 1 && val !== 0){
+					settings.searchBar = defaults.searchBar;
+					console.warn("GSImport:\t One of your GSImport options might be invalid.\n\t\t\t Resetting to default value for " + key + ".");
+				}	
+			}
+			if (key === "picturize"){
+				if (val !== 1 && val !== 0){
+					settings.picturize = defaults.picturize;
+					console.warn("GSImport:\t One of your GSImport options might be invalid.\n\t\t\t Resetting to default value for " + key + ".");
+				}	
+			}
+			
 		});
-
 
         return this.append(function gsImporter() {
-		var $me = $(this),
-			headers = $me.data("headers"),
-			key = $me.data("key"),
-			index = $me.data("index");
+			var $me = $(this),
+				headers = $me.data("headers"),
+				key = $me.data("key"),
+				index = $me.data("index");
 
-		if (typeof key === "undefined") {
-		    console.error("GSImport: No data-key provided for div: " + $me.attr("id"));
-		    return;
-		}
-
-		if (typeof headers === "undefined") {
-		    console.error("GSImport: No data-headers provided for div: " + $me.attr("id"));
-		    return;
-		}
-
-		if (typeof index === "undefined") {
-		    console.warn("GSImport: No data-index provided for div: " + $me.attr("id") + "\nDefaulting to od6");
-		    index = "od6";
-		}
-
-		var url = "https://spreadsheets.google.com/feeds/list/" + key + "/" + index + "/public/values?alt=json";
-
-		console.log(url);
-
-		var headerList = headers.split(", ");
-
-		function picturize(nStr) {
-				switch (nStr)
-				{
-					case "":
-						return "-";
-					case "!":
-						return settings.image1;
-					case "X":
-						return settings.image2;
-					default:
-						return nStr;
-				}
+			if (typeof key === "undefined") {
+			    console.error("GSImport: No data-key provided for div: " + $me.attr("id"));
+			    return;
 			}
 
-		var sheetHTML = "";
-		var headerHTML = "";
+			if (typeof headers === "undefined") {
+			    console.error("GSImport: No data-headers provided for div: " + $me.attr("id"));
+			    return;
+			}
 
-		$.getJSON(url, function(data) {
-			var entry = data.feed.entry;
-			sheetHTML += "<table class=\"" + settings.class.table + "\"><thead><tr class=\"" + settings.class.headerRow + "\">";
+			if (typeof index === "undefined") {
+			    console.warn("GSImport: No data-index provided for div: " + $me.attr("id") + "\nDefaulting to od6");
+			    index = "od6";
+			}
 
-			$.each(headerList, function(){ // Adds headers
-				sheetHTML += "<th class=\"" + settings.class.header + "\">" + this.toString()+"</th>"
-			});
+			var url = "https://spreadsheets.google.com/feeds/list/" + key + "/" + index + "/public/values?alt=json";
+			// console.log(url);
 
-			sheetHTML += "</tr></thead><tbody class=\""+ settings.class.body + "\">";
+			var headerList = headers.split(", ");
 
-			$(entry).each(function(){
-				var $curRow = this;
-				// console.log($curRow);
-				sheetHTML += "<tr>"
-					$(headerList).each(function () {
-							sheetHTML += "<td class=\"" + settings.class.cell + "\">" + picturize(eval("$curRow.gsx$"+this.toString().toLowerCase()+".$t")) + "</td>";
+			function picturize(nStr) {
+					switch (nStr)
+					{
+						case "":
+							return "-";
+						case "!":
+							return settings.image1;
+						case "X":
+							return settings.image2;
+						default:
+							return nStr;
+					}
+				}
+
+			var sheetHTML = "";
+			var headerHTML = "";
+
+			if ( settings.picturize === 1 ) {
+				$.getJSON(url, function(data) {
+					var entry = data.feed.entry;
+					sheetHTML += "<table class=\"" + settings.class.table + "\"><thead><tr class=\"" + settings.class.headerRow + "\">";
+
+					$.each(headerList, function() {
+						sheetHTML += "<th class=\"" + settings.class.header + "\">" + this.toString()+"</th>"
+					});
+
+					sheetHTML += "</tr></thead><tbody class=\""+ settings.class.body + "\">";
+
+					$(entry).each(function(){
+						var $curRow = this;
+						// console.log($curRow);
+						console.log(eval("$curRow.gsx$" + settings.ignore.column + ".$t"));
+						if ( eval("$curRow.gsx$" + settings.ignore.column + ".$t").toLowerCase() !== settings.ignore.trigger.toLowerCase() ){
+							sheetHTML += "<tr>"
+							$(headerList).each(function () {
+								sheetHTML += "<td class=\"" + settings.class.cell + "\">" + picturize(eval("$curRow.gsx$"+this.toString().toLowerCase()+".$t")) + "</td>";
+							});
+							sheetHTML+="</tr>"
+						}
+					});
+					sheetHTML += "</tbody></table>"
+					$($me).append(sheetHTML);
+					console.log("GS Import: " + $me.attr("id") +" key(" + $me.data("key") + ") loaded");
+				});				
+			}
+
+			if ( settings.picturize === 0 ) {
+				$.getJSON(url, function(data) {
+					var entry = data.feed.entry;
+					sheetHTML += "<table class=\"" + settings.class.table + "\"><thead><tr class=\"" + settings.class.headerRow + "\">";
+
+					$.each(headerList, function() {
+						sheetHTML += "<th class=\"" + settings.class.header + "\">" + this.toString()+"</th>"
+					});
+
+					sheetHTML += "</tr></thead><tbody class=\""+ settings.class.body + "\">";
+
+					$(entry).each(function(){
+						var $curRow = this;
+						// console.log($curRow);
+						sheetHTML += "<tr>"
+							$(headerList).each(function () {
+									sheetHTML += "<td class=\"" + settings.class.cell + "\">" + eval("$curRow.gsx$"+this.toString().toLowerCase()+".$t") + "</td>";
+						});
+						sheetHTML+="</tr>"
+					});
+
+					sheetHTML += "</tbody></table>"
+					$($me).append(sheetHTML);
+					console.log("GS Import: " + $me.attr("id") +" key(" + $me.data("key") + ") loaded");
 				});
-				sheetHTML+="</tr>"
-			});
-
-			sheetHTML += "</tbody></table>"
-			$($me).append(sheetHTML);
-
-			console.log("GS Import: " + $me.attr("id") +" key(" + $me.data("key") + ") loaded");
+			}
+		return sheetHTML
 		});
-
-
-		
-	});
 	};
 }(jQuery));
