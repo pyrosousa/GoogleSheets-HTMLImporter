@@ -110,7 +110,7 @@
 			}
 
 			var url = "https://spreadsheets.google.com/feeds/list/" + key + "/" + index + "/public/values?alt=json";
-			// console.log(url);
+			console.log(url);
 
 			var headerList = headers.split(", ");
 
@@ -123,6 +123,7 @@
 					}
 					return nStr;
 				}
+
 				switch (nStr)
 				{
 					case "":
@@ -146,11 +147,16 @@
 					sheetHTML += "<th class=\"" + settings.class.header + "\">" + this.toString()+"</th>";
 				});
 
+				var headerCounter = 0;
+				$.each(headerList, function () {
+					headerList[headerCounter] = this.replace(/^\d+ */g, "").replace(/\s/g, "");
+					headerCounter ++;
+				});
+
 				sheetHTML += "</tr></thead><tbody class=\""+ settings.class.body + "\">";
 
 				$(entry).each(function(){
 					var $curRow = this;
-
 					// if ( $curRow["gsx$"+settings.ignore.column.toLowerCase()].$t.toLowerCase() !== settings.ignore.trigger.toLowerCase() ) {
 						sheetHTML += "<tr>";
 						$(headerList).each(function () {

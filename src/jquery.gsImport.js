@@ -114,8 +114,8 @@
 						picturizeLog += 1;
 					}
 					return nStr;
-				console.log(nStr)
 				}
+
 				switch (nStr)
 				{
 					case "":
@@ -139,14 +139,11 @@
 					sheetHTML += "<th class=\"" + settings.class.header + "\">" + this.toString()+"</th>";
 				});
 
-				console.log(headerList)
 				var headerCounter = 0;
 				$.each(headerList, function () {
 					headerList[headerCounter] = this.replace(/^\d+ */g, "").replace(/\s/g, "");
 					headerCounter ++;
-					console.log(this.replace(/^\d+ */g, ""))
 				});
-				console.log(headerList)
 
 				sheetHTML += "</tr></thead><tbody class=\""+ settings.class.body + "\">";
 
