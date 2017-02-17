@@ -1,12 +1,3 @@
-// The MIT License
-// Copyright (c) 2017 Sean Cardwell
-// https://raw.githubusercontent.com/pyrosousa/GoogleSheets-HTMLImporter/master/Licence.MIT
-
-//features to add:
-//		search-bar
-//		custom-Image Cases
-//		Ignore row if ...
-
 ;(function($) {
 	"use strict";
 
@@ -27,8 +18,9 @@
             image2: "<i class=\"fa fa-times x-icon\"></i>",
             customImages: "",
             ignore: {
-            	"column": "ignore",
-            	"trigger": "X",
+            	"toggle": 0,
+            	"column": "",
+            	"trigger": "",
             }
         };
 
@@ -102,7 +94,10 @@
 			}
 
 			var url = "https://spreadsheets.google.com/feeds/list/" + key + "/" + index + "/public/values?alt=json";
-			console.log(url);
+
+			settings.ignore.trigger.toLowerCase();
+			
+			// console.log(url);
 
 			var headerList = headers.split(", ");
 
@@ -149,7 +144,7 @@
 
 				$(entry).each(function(){
 					var $curRow = this;
-					// if ( $curRow["gsx$"+settings.ignore.column.toLowerCase()].$t.toLowerCase() !== settings.ignore.trigger.toLowerCase() ) {
+					// if ( $curRow["gsx$" + settings.ignore.column].$t.toLowerCase() !== settings.ignore.trigger ) {
 						sheetHTML += "<tr>";
 						$(headerList).each(function () {
 							sheetHTML += "<td class=\"" + settings.class.cell + "\">" + picturize($curRow["gsx$"+this.toString().toLowerCase()].$t) + "</td>";
