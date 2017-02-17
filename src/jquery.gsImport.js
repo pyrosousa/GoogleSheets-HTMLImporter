@@ -102,7 +102,7 @@
 			}
 
 			var url = "https://spreadsheets.google.com/feeds/list/" + key + "/" + index + "/public/values?alt=json";
-			// console.log(url);
+			console.log(url);
 
 			var headerList = headers.split(", ");
 
@@ -114,6 +114,7 @@
 						picturizeLog += 1;
 					}
 					return nStr;
+				console.log(nStr)
 				}
 				switch (nStr)
 				{
@@ -138,18 +139,26 @@
 					sheetHTML += "<th class=\"" + settings.class.header + "\">" + this.toString()+"</th>";
 				});
 
+				console.log(headerList)
+				var headerCounter = 0;
+				$.each(headerList, function () {
+					headerList[headerCounter] = this.replace(/^\d+ */g, "").replace(/\s/g, "");
+					headerCounter ++;
+					console.log(this.replace(/^\d+ */g, ""))
+				});
+				console.log(headerList)
+
 				sheetHTML += "</tr></thead><tbody class=\""+ settings.class.body + "\">";
 
 				$(entry).each(function(){
 					var $curRow = this;
-
-					if ( $curRow["gsx$"+settings.ignore.column.toLowerCase()].$t.toLowerCase() !== settings.ignore.trigger.toLowerCase() ) {
+					// if ( $curRow["gsx$"+settings.ignore.column.toLowerCase()].$t.toLowerCase() !== settings.ignore.trigger.toLowerCase() ) {
 						sheetHTML += "<tr>";
 						$(headerList).each(function () {
 							sheetHTML += "<td class=\"" + settings.class.cell + "\">" + picturize($curRow["gsx$"+this.toString().toLowerCase()].$t) + "</td>";
 						});
 						sheetHTML+="</tr>";
-					}
+					// }
 				});
 				sheetHTML += "</tbody></table>";
 				$($me).append(sheetHTML);

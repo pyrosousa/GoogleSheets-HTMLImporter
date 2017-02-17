@@ -151,13 +151,13 @@
 				$(entry).each(function(){
 					var $curRow = this;
 
-					if ( $curRow["gsx$"+settings.ignore.column.toLowerCase()].$t.toLowerCase() !== settings.ignore.trigger.toLowerCase() ) {
+					// if ( $curRow["gsx$"+settings.ignore.column.toLowerCase()].$t.toLowerCase() !== settings.ignore.trigger.toLowerCase() ) {
 						sheetHTML += "<tr>";
 						$(headerList).each(function () {
 							sheetHTML += "<td class=\"" + settings.class.cell + "\">" + picturize($curRow["gsx$"+this.toString().toLowerCase()].$t) + "</td>";
 						});
 						sheetHTML+="</tr>";
-					}
+					// }
 				});
 				sheetHTML += "</tbody></table>";
 				$($me).append(sheetHTML);
