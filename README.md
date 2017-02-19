@@ -1,4 +1,13 @@
+#New Update: Probably done with this.
+
+Back when I started my journey into this last summer, I didn't know too much about web development. Didn't know the best ways to search for something. I recently just discovered [Sheetrock.js](https://github.com/chriszarate/sheetrock). Which does everything I've wanted and more, and it's already made. Kudos to me and my research skills.
+
+Either way I learned a lot through the process of starting to make this, from writing a jQuery plugin, to trying to optimize it, to how much fun this can be. Hopefully my next idea will be more unique, or I can innovate upon something, rather than reinventing the wheel.
+
+
+Anyway, here is what I've come up with. Maybe someone will see this and find it useful. 
 # GoogleSheets-HTMLImporter
+
 Attempt at making a jQuery plugin that will import data from a google spreadsheet. The more I have learned about this the more I have discovered that it probably isn't that impressive.
 
 However, I still think this will end up being a useful plugin, since it will make it crazy easy to import a google sheet into a webpage.
