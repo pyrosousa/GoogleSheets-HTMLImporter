@@ -119,6 +119,15 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "test/index.html",
+			"settings":
+			{
+				"buffer_size": 2445,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -307,13 +316,15 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter"
+		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter",
+		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter/test",
+		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter/test/spec"
 	],
 	"file_history":
 	[
 		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter/test/spec/jquery.gsImport.spec.js",
-		"/Users/sean_cardwell/.bash",
 		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter/src/jquery.gsImport.js",
+		"/Users/sean_cardwell/.bash",
 		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter/demo/index.html",
 		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter/dist/jquery.gsImport.js",
 		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter/src/gs_Importer.js",
@@ -608,8 +619,38 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "test/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2445,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1849,
+								1849
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 200.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],

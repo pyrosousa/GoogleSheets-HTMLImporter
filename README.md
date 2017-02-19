@@ -1,11 +1,6 @@
-#New Update: Probably done with this.
+### My last update said I was going to stop developping this.
+Instead, I think I'm going to just use some inspiration from [Sheetrock.js](https://github.com/chriszarate/sheetrock) as well as some other plugins. Specifically since when I have tried their plugins out, it hasn't been working for me. 
 
-Back when I started my journey into this last summer, I didn't know too much about web development. Didn't know the best ways to search for something. I recently just discovered [Sheetrock.js](https://github.com/chriszarate/sheetrock). Which does everything I've wanted and more, and it's already made. Kudos to me and my research skills.
-
-Either way I learned a lot through the process of starting to make this, from writing a jQuery plugin, to trying to optimize it, to how much fun this can be. Hopefully my next idea will be more unique, or I can innovate upon something, rather than reinventing the wheel.
-
-
-Anyway, here is what I've come up with. Maybe someone will see this and find it useful. 
 # GoogleSheets-HTMLImporter
 
 Attempt at making a jQuery plugin that will import data from a google spreadsheet. The more I have learned about this the more I have discovered that it probably isn't that impressive.
@@ -58,6 +53,8 @@ http://stackoverflow.com/questions/4247188/how-do-i-group-a-certain-number-of-el
 
 ####Parsing json from google sheet
 https://coderwall.com/p/duapqq/use-a-google-spreadsheet-as-your-json-backend
+
+####[Sheetrock.js](https://github.com/chriszarate/sheetrock)
 
 #License
 This software is available under the following license:
