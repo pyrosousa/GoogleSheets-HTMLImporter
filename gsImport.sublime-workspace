@@ -1,0 +1,702 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pic",
+				"picturizeLog"
+			],
+			[
+				"hea",
+				"headerRow"
+			],
+			[
+				"ch",
+				"changed"
+			],
+			[
+				"h",
+				"headerRow"
+			],
+			[
+				"head",
+				"headerList"
+			],
+			[
+				"headers",
+				"headers"
+			],
+			[
+				"max",
+				"maxLength"
+			],
+			[
+				"col-sm",
+				"col-sm-offset-3"
+			],
+			[
+				"col-",
+				"col-sm-6"
+			],
+			[
+				"brew",
+				"brewBackup"
+			],
+			[
+				"dips",
+				"displayDigital"
+			],
+			[
+				"bs4",
+				"bs4"
+			],
+			[
+				"this",
+				"thisDirPath"
+			],
+			[
+				"color",
+				"colorCounter"
+			],
+			[
+				"isKinematic",
+				"isKinematic\tRigidbody.*"
+			],
+			[
+				"isKin",
+				"isKinematic\tRigidbody.*"
+			],
+			[
+				"isKi",
+				"isKinematic\tRigidbody.*"
+			],
+			[
+				"search",
+				"searchthese"
+			],
+			[
+				"table",
+				"tableHeaders"
+			],
+			[
+				"weap",
+				"weaponDmg"
+			],
+			[
+				"ban",
+				"bankAccount"
+			],
+			[
+				"doc",
+				"dockPref02"
+			],
+			[
+				"app",
+				"appPath"
+			],
+			[
+				"Slider",
+				"sliderInt"
+			],
+			[
+				"n",
+				"n"
+			],
+			[
+				"adding",
+				"padding-top"
+			],
+			[
+				"i",
+				"inline-block"
+			],
+			[
+				"inl",
+				"inline-block"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"indent",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"python",
+				"Set Syntax: Python"
+			],
+			[
+				"bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"livere",
+				"LiveReload: Self test"
+			],
+			[
+				"package inst",
+				"Package Control: Install Package"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"package",
+				"Package Control: Enable Package"
+			],
+			[
+				"jshint",
+				"JSHint"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"pyth",
+				"Set Syntax: Python"
+			],
+			[
+				"javascr",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"pytho",
+				"Set Syntax: Python"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"javascrip",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"text",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"word",
+				"Word Wrap: Toggle"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"syn html",
+				"Set Syntax: HTML"
+			],
+			[
+				"syntax bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"Snippet: ",
+				"Snippet: bs3-row"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			],
+			[
+				"lor",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"lorem",
+				"Snippet: Lorem ipsum"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"quit()",
+			"ls",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter"
+	],
+	"file_history":
+	[
+		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter/test/spec/jquery.gsImport.spec.js",
+		"/Users/sean_cardwell/.bash",
+		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter/src/jquery.gsImport.js",
+		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter/demo/index.html",
+		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter/dist/jquery.gsImport.js",
+		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter/src/gs_Importer.js",
+		"/Users/sean_cardwell/Sites/demo/index.html",
+		"/Users/sean_cardwell/Downloads/jquery-boilerplate-master/Gruntfile.js",
+		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter/Gruntfile.js",
+		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter/package.json",
+		"/Users/sean_cardwell/Documents/! Dev/Personal_Automation/hideCmdTab/toggleCmdTab.py",
+		"/Users/sean_cardwell/Documents/! Dev/Personal_Automation/hideCmdTab/hideCmdTab.py",
+		"/Users/sean_cardwell/Sites/index.html",
+		"/etc/apache2/httpd.conf",
+		"/Users/sean_cardwell/Sites/join_strings.php",
+		"/Users/sean_cardwell/Sites/join_strings",
+		"/Users/sean_cardwell/Sites/quotes.php",
+		"/Users/sean_cardwell/Sites/comments.php",
+		"/Users/sean_cardwell/Sites/display.php",
+		"/Users/sean_cardwell/Sites/.htaccess",
+		"/private/etc/php.ini",
+		"/private/etc/php",
+		"/Users/sean_cardwell/Downloads/Ex_Files_Installing_AMP/Exercise Files/phpMyAdmin/config.inc.php",
+		"/private/etc/apache2/extra/httpd-userdir.conf",
+		"/Users/sean_cardwell/Sites/phpMyAdmin/config.inc.php",
+		"/Users/sean_cardwell/Sites/phpMyAdmin/config.sample.inc.php",
+		"/private/etc/apache2/users/sean_cardwell.conf",
+		"/etc/apache2/users/sean_cardwell.conf",
+		"/Library/WebServer/Documents/index.html.en",
+		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter/README.md",
+		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter/Licence.mit",
+		"/Users/sean_cardwell/Downloads/Ex_Files_jQuery_Plugins-1/Exercise Files/Chapter_03/03_06/end/js/jquery.autoImageCaption.js",
+		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter/demo/css/styles.css",
+		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter/src/filter.gsImport.js",
+		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter/old-JSVersion/gs_Importer.js",
+		"/Users/sean_cardwell/Downloads/Ex_Files_jQuery_Plugins-1/Exercise Files/Chapter_02/02_04/start/index.html",
+		"/Users/sean_cardwell/Downloads/Ex_Files_jQuery_Plugins/Exercise Files/Chapter_03/03_01/start/gallery.html",
+		"/Users/sean_cardwell/Downloads/Ex_Files_jQuery_Plugins/Exercise Files/Chapter_02/02_04/start/index.html",
+		"/Users/sean_cardwell/Downloads/Ex_Files_jQuery_Plugins/Exercise Files/Chapter_02/02_05/end/index.html",
+		"/Users/sean_cardwell/Downloads/Ex_Files_jQuery_Plugins/Exercise Files/Chapter_02/02_01/start/index.html",
+		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter/src/gsImportStartingPoint.js",
+		"/Users/sean_cardwell/Documents/! Dev/odinProject/_templates/WebpageBoiler/index.html",
+		"/Users/sean_cardwell/Documents/! Dev/odinProject/Etch-A-Sketch/index.html",
+		"/Users/sean_cardwell/Documents/! Dev/odinProject/Etch-A-Sketch/js/main.js",
+		"/Users/sean_cardwell/Documents/! Dev/odinProject/Etch-A-Sketch/css/styles.css",
+		"/Users/sean_cardwell/Documents/! Dev/odinProject/Etch-A-Sketch/css/style.css",
+		"/Users/sean_cardwell/Documents/! Dev/odinProject/Google/index.html",
+		"/Users/sean_cardwell/Documents/! Dev/odinProject/_templates/Starter.html",
+		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter/dist/jquery.boilerplate.js",
+		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter/.editorconfig",
+		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter/.gitignore",
+		"/Users/sean_cardwell/Documents/Random/Icons/CCIcons/Iconify.sh",
+		"/Users/sean_cardwell/bin/Iconify.sh",
+		"/Users/sean_cardwell/Documents/Random/Icons/CCIcons-assets/PNG/DW/.bash",
+		"/Users/sean_cardwell/Desktop/_bookmarks.html",
+		"/Users/sean_cardwell/Google Drive/Adv-New-Media/ftp/js/gs_Importer.js",
+		"/Users/sean_cardwell/Documents/College_Senior/DPL/DPL-GithubScripts/js/gs_Importer.js",
+		"/Users/sean_cardwell/Google Drive/Adv-New-Media/ftp/js/jquery.gsImport.js",
+		"/Users/sean_cardwell/Documents/College_Senior/Adv-New-Media_VM470/GishurruShaders/Assets/_Shaders/0000_SimpleColor.shader",
+		"/Users/sean_cardwell/Documents/College_Senior/Adv-New-Media_VM470/GishurruShaders/Assets/_Shaders/0000_SimpleUV.shader",
+		"/Users/sean_cardwell/Documents/College_Senior/Adv-New-Media_VM470/GishurruShaders/Assets/_Shaders/0000_SimpleTexAlphaTint.shader",
+		"/Users/sean_cardwell/Documents/College_Senior/Adv-New-Media_VM470/GishurruShaders/Assets/_Shaders/0000_SimpleTex.shader",
+		"/Users/sean_cardwell/Documents/College_Senior/Adv-New-Media_VM470/GishurruShaders/Assets/_Shaders/0000_SimpleDistort.shader",
+		"/Users/sean_cardwell/Documents/Personal_Automation/ChromeExtension/manifest.json",
+		"/Users/sean_cardwell/Downloads/notifications/manifest.json",
+		"/Users/sean_cardwell/bin/screenlapse.py",
+		"/Users/sean_cardwell/Documents/Personal_Automation/Screenshot/TestPack.py",
+		"/Users/sean_cardwell/Documents/Personal_Automation/Screenshot/tkinter.py",
+		"/Users/sean_cardwell/Documents/Personal_Automation/Screenshot/testGridNoApp.py",
+		"/Users/sean_cardwell/bin/steamLibrary.cmd",
+		"/Users/sean_cardwell/Downloads/builtin_shaders-5.5.0f3/CGIncludes/UnityStandardConfig.cginc",
+		"/Users/sean_cardwell/bin/steamLibrary",
+		"/Users/sean_cardwell/Documents/Personal_Automation/Prefs/V3/pyPrefs.py",
+		"/Users/sean_cardwell/Documents/College_Senior/DPL/DPL-GithubScripts/js/zendeskJS_SeanScripts.js",
+		"/Users/sean_cardwell/Documents/College_Senior/DPL/DPL-GithubScripts/css/zendeskCSS_SeanEdits.css",
+		"/Users/sean_cardwell/Documents/College_Senior/DPL/DPL-GithubScripts/zendesk_SWChartArticlePage.html",
+		"/Users/sean_cardwell/.nuke/init.py",
+		"/Volumes/Hookfang/_Apps/SteamLibrary/steamapps/common/.bash",
+		"/Users/sean_cardwell/Documents/College_Senior/DPL/Zendesk_JS.js",
+		"/Users/sean_cardwell/Documents/College_Senior/DPL/Zendesk_CSS.css",
+		"/Users/sean_cardwell/Documents/College_Senior/DPL/Zendesk_ArticleScripts.html",
+		"/Users/sean_cardwell/Documents/Personal_Automation/Screenshot/ScreenLapse.py",
+		"/Users/sean_cardwell/Documents/Personal_Automation/Prefs/V2/tkinter/pyPrefs.py",
+		"/Users/sean_cardwell/Documents/College_Senior/DPL/DPL-GithubScripts/Zendesk_Embed/curlybars.html",
+		"/Users/sean_cardwell/Documents/College_Senior/DPL/DPL-GithubScripts/js/GS_Versions.js",
+		"/Users/sean_cardwell/Desktop/untitled.html",
+		"/Users/sean_cardwell/Downloads/Course Evals/VM470",
+		"/Users/sean_cardwell/Documents/College_Senior/Adv-New-Media_VM470/BrainGameDev/Assets/_Skyboxes/blendSkybox/DayNightCycle.cs",
+		"/Users/sean_cardwell/Documents/College_Senior/DPL/DPL-GithubScripts/css/jquery.fancybox.css",
+		"/Users/sean_cardwell/Counter.py",
+		"/Users/sean_cardwell/click.m",
+		"/Users/sean_cardwell/Desktop/.bash",
+		"/Users/sean_cardwell/Documents/College_Senior/Adv-New-Media_VM470/BrainGameDev/Assets/_Scripts/dynamicFracture_RigidBody.cs",
+		"/Users/sean_cardwell/Desktop/Insta/instaScrape.py",
+		"/Users/sean_cardwell/Documents/College_Senior/Environmental-Science_SC320/Final_Campaign/index.html",
+		"/Users/sean_cardwell/Documents/College_Senior/Adv-New-Media_VM470/BrainGameDev/Assets/Houdini Script Access/Scripts/ExampleScript.cs",
+		"/Users/sean_cardwell/Documents/College_Senior/Adv-New-Media_VM470/BrainGameDev/Assets/_Scripts/enableDynamics.cs",
+		"/Users/sean_cardwell/Documents/College_Senior/Adv-New-Media_VM470/BrainGameDev/Assets/_Scripts/enable Dynamics.cs",
+		"/Users/sean_cardwell/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/sean_cardwell/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/sean_cardwell/Desktop/fixHostName/s.py",
+		"/Users/sean_cardwell/Desktop/fixHostName.py",
+		"/Users/sean_cardwell/Documents/College_Senior/Adv-New-Media_VM470/houdiniEngineTesting/Assets/dynamicFracture_RigidBody.cs",
+		"/Users/sean_cardwell/Desktop/fixHostName.sh",
+		"/Users/sean_cardwell/Documents/College_Senior/Adv-New-Media_VM470/houdiniEngineTesting/Assets/Houdini/Scripts/HoudiniAsset.cs",
+		"/Users/sean_cardwell/bash",
+		"/Users/sean_cardwell/Documents/Personal_Automation/Backup_and_Clean/V3/smcBackup",
+		"/Users/sean_cardwell/Desktop/Backups/DPL_Zendesk/Zendesk_Backup.py",
+		"/Users/sean_cardwell/Downloads/fancyapps-fancyBox-18d1712/demo/myFancy.html",
+		"/Users/sean_cardwell/Downloads/fancyapps-fancyBox-18d1712/demo/iframe.html",
+		"/Volumes/students/Zdesk/install.sh",
+		"/Users/sean_cardwell/Desktop/Backups/_install/README.txt",
+		"/Users/sean_cardwell/Downloads/Maggie Hassan Governor _ NH.gov.html",
+		"/Users/sean_cardwell/Desktop/Backups/Zendesk_Backup.py",
+		"/Users/sean_cardwell/Desktop/Backups/_install/SetupZendeskBackup.sh",
+		"/Users/sean_cardwell/Desktop/Backups/SetupZendeskBackup.sh",
+		"/Volumes/DPL/Sean/_ZendeskBackup/Zendesk_Backup.py",
+		"/Users/sean_cardwell/Desktop/Backups/make_backup.py",
+		"/Users/sean_cardwell/Desktop/Emerson College Post Production Labs.html",
+		"/Users/sean_cardwell/Desktop/fullcalendar-3.0.1/demos/gcal_demo.html",
+		"/Users/sean_cardwell/Desktop/fullcalendar-3.0.1/demos/gcal.html",
+		"/Users/sean_cardwell/Downloads/fullcalendar-3.0.1/demos/gcal.html",
+		"/Users/sean_cardwell/Desktop/custom_calendar.php",
+		"/Users/sean_cardwell/Desktop/GoogleCalSource.html",
+		"/Users/sean_cardwell/Desktop/custom_calendar.css",
+		"/Users/sean_cardwell/Documents/College_Senior/Adv-New-Media_VM470/CrashAndClimb/Assets/Scripts/createGrid.js",
+		"/Users/sean_cardwell/Documents/College_Senior/Adv-New-Media_VM470/CrashAndClimb/Assets/Scripts/interactableScript.cs",
+		"/Users/sean_cardwell/Documents/College_Senior/Adv-New-Media_VM470/gatu_WallTutorial/HoudiniTemp/HoudiniSessionData.txt"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"808",
+			" + ",
+			"curRow",
+			"808",
+			"\t",
+			"'",
+			"\t",
+			" + \"",
+			"settings.c",
+			"settings",
+			" + val",
+			"+ val.",
+			"val",
+			"key.val",
+			"key.",
+			".key.",
+			".val.",
+			"val",
+			"table",
+			"key",
+			" ",
+			");",
+			".val);",
+			"GSImport:",
+			"\\n",
+			"for:",
+			"invalid.",
+			"for\"",
+			"key)",
+			"key",
+			"not be valid",
+			"searchBar",
+			"key",
+			"searchBar",
+			"val",
+			"key",
+			"table",
+			"break;",
+			"'",
+			"\"",
+			"'",
+			"\"",
+			"'",
+			"[",
+			"\"]",
+			"][\"",
+			"\"",
+			"'",
+			"if",
+			"off",
+			"inputfile",
+			"\")",
+			"New value is: ",
+			"print",
+			"changed = True",
+			"on",
+			"true",
+			"curCell",
+			"/Library/WebServer/Documents",
+			"update",
+			"localhost",
+			"userdir",
+			"user",
+			"display_errors",
+			"update",
+			"table",
+			"cell",
+			":",
+			"Class",
+			"settings",
+			"cellClass",
+			"\"",
+			"\"<i",
+			"headerClass",
+			"808",
+			"\t",
+			"$me + ",
+			"'.results ",
+			"tbody",
+			"// \t",
+			"##",
+			"#",
+			"div",
+			"quotes",
+			".results",
+			"table",
+			"th",
+			"thisHeader",
+			"p",
+			"\t",
+			"add",
+			"$me",
+			"The HTML5 Herald",
+			"update",
+			"html",
+			"$NAME.iconset",
+			"PNG/",
+			"$1",
+			"$NAME",
+			"PNG/",
+			"Name",
+			"$Name.png",
+			"MyIcon",
+			"Icon1024.png",
+			".png",
+			"-",
+			"@",
+			".png",
+			"PNG/",
+			"png",
+			"PNG",
+			"PNG/",
+			".png",
+			"PNG/",
+			", ",
+			"headers",
+			"thisHeader",
+			"//",
+			"url",
+			"$brewBackup",
+			"update",
+			"screenlapse(",
+			"ScreenShot",
+			"screenshot",
+			"self.v",
+			"row = 1",
+			"master",
+			"grid"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\")"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter"
+		}
+	],
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 134.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
+	"project": "",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 127.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 216.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
