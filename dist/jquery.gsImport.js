@@ -136,6 +136,7 @@
 
 			$.getJSON(url, function(data) {
 				var entry = data.feed.entry;
+
 				sheetHTML += "<table class=\"" + settings.class.table + "\"><thead><tr class=\"" + settings.class.headerRow + "\">";
 
 				$.each(headerList, function() {
@@ -143,6 +144,7 @@
 				});
 
 				var headerCounter = 0;
+
 				$.each(headerList, function () {
 					headerList[headerCounter] = this.replace(/^\d+ */g, "").replace(/\s/g, "");
 					headerCounter ++;
@@ -150,18 +152,36 @@
 
 				sheetHTML += "</tr></thead><tbody class=\""+ settings.class.body + "\">";
 
-				$(entry).each(function(){
-					var $curRow = this;
-					// if ( $curRow["gsx$" + settings.ignore.column].$t.toLowerCase() !== settings.ignore.trigger ) {
+				if ( Boolean(settings.ignore.toggle) === true ){
+					$(entry).each(function(){
+						var $curRow = this;
+						if ( $curRow["gsx$"+settings.ignore.column.toLowerCase()].$t.toLowerCase() !== settings.ignore.trigger.toLowerCase() ) {
+							sheetHTML += "<tr>";
+							$(headerList).each(function () {
+								var thisHeader = this;
+								sheetHTML += "<td class=\"" + settings.class.cell + "\">" + picturize($curRow["gsx$"+thisHeader.toString().toLowerCase()].$t) + "</td>";
+							});
+							sheetHTML+="</tr>";
+						}
+					});
+				} else {
+					$(entry).each(function(){
+						var $curRow = this;
 						sheetHTML += "<tr>";
 						$(headerList).each(function () {
-							sheetHTML += "<td class=\"" + settings.class.cell + "\">" + picturize($curRow["gsx$"+this.toString().toLowerCase()].$t) + "</td>";
+							var thisHeader = this;
+							sheetHTML += "<td class=\"" + settings.class.cell + "\">" + picturize($curRow["gsx$"+thisHeader.toString().toLowerCase()].$t) + "</td>";
 						});
 						sheetHTML+="</tr>";
-					// }
-				});
+					});
+				}
+
+				
+
 				sheetHTML += "</tbody></table>";
+
 				$($me).append(sheetHTML);
+
 				console.log("GS Import: " + $me.attr("id") +" key(" + $me.data("key") + ") loaded");
 			});				
 
