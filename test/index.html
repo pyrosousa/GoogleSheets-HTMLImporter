@@ -39,9 +39,17 @@
 			<!-- <div id="gsImport-2" class="gsImport" data-key="1YZK_3X8-te4SSluPfwB1ddKJDufkgyJB0X-Q44GkaMg" data-headers="Tasks, Status, Comment, References" data-index="2"></div> -->
 		</div>
 
-		<script src="../src/jquery.gsImport.js"></script>
+		<script src="spec/jquery.gsImport.spec.js"></script>
 		<script type="text/javascript">
-			$(".gsImport").gsImport();
+			$(".gsImport").gsImport({
+				"image2": "<i class=\"fa fa-check check-icon\"></i>",
+				ignore: {
+					"toggle": "off",
+					"column": "Status",
+					"trigger": "dead"
+					}
+				}
+				);
 		</script>
 
 	</body>
