@@ -127,6 +127,15 @@
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 1841,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -322,6 +331,7 @@
 	],
 	"file_history":
 	[
+		"/Users/sean_cardwell/Downloads/RiggedBox_v3.0.ffx",
 		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter/test/spec/jquery.gsImport.spec.js",
 		"/Users/sean_cardwell/Documents/! Dev/GoogleSheets-HTMLImporter/src/jquery.gsImport.js",
 		"/Users/sean_cardwell/.bash",
@@ -448,8 +458,7 @@
 		"/Users/sean_cardwell/Desktop/GoogleCalSource.html",
 		"/Users/sean_cardwell/Desktop/custom_calendar.css",
 		"/Users/sean_cardwell/Documents/College_Senior/Adv-New-Media_VM470/CrashAndClimb/Assets/Scripts/createGrid.js",
-		"/Users/sean_cardwell/Documents/College_Senior/Adv-New-Media_VM470/CrashAndClimb/Assets/Scripts/interactableScript.cs",
-		"/Users/sean_cardwell/Documents/College_Senior/Adv-New-Media_VM470/gatu_WallTutorial/HoudiniTemp/HoudiniSessionData.txt"
+		"/Users/sean_cardwell/Documents/College_Senior/Adv-New-Media_VM470/CrashAndClimb/Assets/Scripts/interactableScript.cs"
 	],
 	"find":
 	{
@@ -619,7 +628,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -646,6 +655,35 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 200.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1841,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								299,
+								299
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
