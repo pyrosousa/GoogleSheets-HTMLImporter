@@ -15,8 +15,8 @@
                 searchBar: 0,
                 hyperlink: "hyperlink",
             },
-            picturize: {
-                toggle: "true",
+            picturizeToggle: 0,
+            picturizeImages: {
                 image1: ["!", "<i class=\"fa fa-check check-icon\"></i>"],
                 image2: ["X", "<i class=\"fa fa-times x-icon\"></i>"],
             },
@@ -64,17 +64,10 @@
                     console.warn("GSImport:\t One of your GSImport options might be invalid.\n\t\t\t Resetting to default value for " + key + ".");
                 }
             }
-            // if (key === "picturize") {
-            //     if (typeof(key.toggle) !== "boolean") {
-            //         settings.picturize = defaults.picturize;
-            //         console.warn("GSImport:\t One of your GSImport options might be invalid.\n\t\t\t Resetting to default value for " + key + ".");
-            //     }
-            // }
         });
 
 
         var map = new Map(Object.entries(settings.picturize));
-        // map.delete('toggle');
         console.log(map.entries());
 
         return this.append(function gsImporter() {
